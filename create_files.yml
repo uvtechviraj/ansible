@@ -7,5 +7,5 @@
   tasks: 
   - name: create a file 
     file: 
-      path: /opt/dir1
-      state: absent 
+      path: /opt/file1
+      state: touch 

@@ -12,7 +12,7 @@
     notify: start httpd services 
 
   - copy:
-      src: /home/ansadmin/playbooks/index.html
+      src: /home/ansadmin/ansible/index.html
       dest: /var/www/html
 
   handlers: 

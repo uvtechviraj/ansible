@@ -1,6 +1,6 @@
 ---
 - name: install jenkins
-  hosts: jenkins
+  hosts: all
   become: true
   gather_facts: no
 
