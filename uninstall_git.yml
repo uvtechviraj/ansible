@@ -1,0 +1,13 @@
+---
+- name: Uninstall Git
+  hosts: all
+  become: true
+  gather_facts: no
+
+  tasks:
+    - name: Uninstall Git
+      package:
+        name: git
+        state: absent
+
+ 

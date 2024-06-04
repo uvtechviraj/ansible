@@ -1,12 +1,18 @@
 ---
 - name: cloning repo
-  hosts: webservers
+  hosts: buildservers
+  become: true
   gather_facts: no
   vars_files:
      - vault2.yml
 
   tasks:  
+  - name: create a dir
+    file:
+      path: /opt/first_demo_project
+      state: directory
+
   - name: cloning repo
     git: 
-      repo: https://ravdy:{{ git_password }}@github.com/ravdy/vaulttest.git
-      dest: /home/ansadmin/valuttest 
+      repo: https://uvtechviraj:{{ git_password }}@github.com/uvtechviraj/first-demo-project.git
+      dest: /opt/first_demo_project 

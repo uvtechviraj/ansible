@@ -1,0 +1,14 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: we are going to create a directory
+      file:
+        path: /opt/demo
+        state: directory
+    - name: cloning a repo in managed nodes
+      ansible.builtin.git:
+        repo: https://github.com/uvtechviraj/second-demo-project.git
+        dest: /opt/demo
+        single_branch: yes
+        version: main

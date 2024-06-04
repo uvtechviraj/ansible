@@ -1,0 +1,8 @@
+---
+
+- hosts: all
+  become: true
+  tasks:
+    - name: we are going to create a user
+      ansible.builtin.user:
+        name: rocky
